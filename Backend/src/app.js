@@ -7,6 +7,17 @@ import eventRoutes from "./routes/event.routes.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
+import cors from "cors";
+
+app.use(
+  cors({
+    origin: [
+      "https://assignment-vckh.vercel.app/"
+    ],
+    credentials: true,
+  })
+);
+
 const app = express();
 app.use(express.json());
 app.use(cookieParser()); //middleware
