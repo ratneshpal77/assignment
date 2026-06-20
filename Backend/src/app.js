@@ -14,7 +14,10 @@ app.use(cookieParser());
 // cors (keep early)
 app.use(
   cors({
-    origin: "https://assignment-5iki3u20h-ratnesh-pals-projects.vercel.app",
+    origin: [
+      "https://assignment-sigma-rosy.vercel.app",
+      "https://assignment-5iki3u20h-ratnesh-pals-projects.vercel.app"
+    ],
     credentials: true,
   })
 );
