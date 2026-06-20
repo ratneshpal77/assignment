@@ -11,7 +11,7 @@ const EventList = () => {
   const getEvents = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/api/getEvent"
+        `${import.meta.env.VITE_API_URL}/api/getEvent`
       );
 
       const data = await response.json();
