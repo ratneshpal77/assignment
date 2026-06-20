@@ -7,10 +7,11 @@ import eventRoutes from "./routes/event.routes.js";
 
 const app = express();
 
+// middleware
 app.use(express.json());
 app.use(cookieParser());
 
-// ✅ MUST BE FIRST
+// cors (keep early)
 app.use(
   cors({
     origin: "https://assignment-5iki3u20h-ratnesh-pals-projects.vercel.app",
@@ -18,10 +19,13 @@ app.use(
   })
 );
 
-// ✅ handle preflight
-app.options("*", cors());
-
+// routes
 app.use("/api/user", userRoutes);
 app.use("/api", eventRoutes);
+
+// ✅ 404 handler MUST be LAST
+app.use((req, res) => {
+  res.status(404).json({ message: "Route not found" });
+});
 
 export default app;
