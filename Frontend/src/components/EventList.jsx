@@ -11,7 +11,7 @@ const EventList = () => {
   const getEvents = async () => {
     try {
       const response = await fetch(
-        `https://assignment-qusi18q1j-ratnesh-pals-projects.vercel.app`
+        `https://assignment-qusi18q1j-ratnesh-pals-projects.vercel.app/api/getEvent`
       );
 
       const data = await response.json();
