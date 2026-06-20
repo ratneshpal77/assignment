@@ -1,8 +1,8 @@
 {
   "name": "event-booking-app",
   "scripts": {
-    "install-all": "cd backend && npm install && cd ../frontend && npm install",
-    "build": "cd frontend && npm run build",
-    "start": "cd backend && npm start"
+    "install-all": "cd Backend && npm install && cd ../Frontend && npm install",
+    "build": "cd Frontend && npm run build",
+    "start": "cd Backend && npm start"
   }
 }
